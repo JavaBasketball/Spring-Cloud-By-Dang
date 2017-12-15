@@ -1,0 +1,38 @@
+#server:
+#  port: 8761
+#
+## 安全验证
+security:
+  basic:
+    enabled: true
+  user:
+    name: jack.ma
+    password: 1qaz2wsx
+#
+#eureka:
+#  instance:
+#    hostname: eureka
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+#  application:
+#    name: eureka-server
+
+spring:
+  application:
+    name: eureka-server-cluster
+  profiles:
+    active: server1
+
+
+#server:
+#  port: 8761
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
